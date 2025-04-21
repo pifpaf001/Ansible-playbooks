@@ -34,7 +34,7 @@
       - name: store export to local file
         ansible.builtin.copy:
           content: "{{ export.stdout }}"
-          dest: "output/{{ inventory_hostname }}.config"
+          dest: "/home/semaphore/backup/ROS/{{ inventory_hostname }}.config"
         when: export is defined
         delegate_to: localhost
 
