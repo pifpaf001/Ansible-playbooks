@@ -12,7 +12,8 @@
       block:
 
       - name: Ensure that sshpass is installed
-        ansible.builtin.shell: whereis sshpass | awk '{print $2}'
+#        ansible.builtin.shell: whereis sshpass | awk '{print $2}'
+        ansible.builtin.shell: which sshpass
         run_once: yes
         register: sshpass
         delegate_to: localhost
